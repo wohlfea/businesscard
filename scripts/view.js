@@ -15,7 +15,7 @@ projectView.handleTabs = function() {
       $('#about').show();
     };
 
-  })
+  });
 
 };
 
