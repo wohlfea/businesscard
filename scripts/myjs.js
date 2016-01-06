@@ -15,6 +15,7 @@ Project.prototype.toHTML = function() {
   $newProject.data('pubdate', this.pubdate);
   $newProject.data('url', this.url);
   $newProject.data('imgsrc', this.imgsrc);
+  console.log($newProject.data());
   $newProject.find('h1').html(this.title);
   $newProject.find('time').html(this.pubdate);
   $newProject.find('#desc').html(this.desc);
