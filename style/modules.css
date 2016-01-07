@@ -2,13 +2,16 @@
   .menu-div {
     display: none;
   }
-  nav ul{
+  nav ul {
+    display: block;
+  }
+  #menuItems{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
   }
-  nav ul li {
+  #menuItems li {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 20px;

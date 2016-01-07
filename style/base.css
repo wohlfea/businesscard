@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -11,7 +10,7 @@ nav {
   background-color: #DCDCDD;
 }
 nav i {
-  margin: 0px 20px 20px 20px;
+  margin: 0px 15px 20px 15px;
 }
 nav ul {
   display: none;
