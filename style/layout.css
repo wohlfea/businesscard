@@ -5,3 +5,16 @@
   padding: 20px 0px 20px 0px;
   text-align: right;
 }
+
+
+#mainheading {
+  background-color: #46494C;
+  margin-top: 0px;
+}
+
+#mainheading h1 {
+  margin-top: 0px;
+  font-size: 300%;
+  text-align: center;
+  color: #DCDCDD;
+}
