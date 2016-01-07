@@ -19,4 +19,13 @@ projectView.handleTabs = function() {
 
 };
 
+var menuView = {};
+
+menuView.hamburgerHandler = function () {
+  $('.icon-menu').on('click', function(){
+    $('nav ul').slideToggle('fast');
+    $('.icon-menu').toggleClass('icon-cross');
+  });
+};
 projectView.handleTabs();
+menuView.hamburgerHandler();
