@@ -1,13 +1,11 @@
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
-  background-color: #C5C3C6;
-  color: #46494C;
+.icon-menu {
+  font-size: 200%;
 }
-ul {
-  list-style-type: none;
+.menu-div {
+  padding: 20px 0px 20px 0px;
+  text-align: right;
 }
+
 
 #mainheading {
   background-color: #46494C;
@@ -16,7 +14,7 @@ ul {
 
 #mainheading h1 {
   margin-top: 0px;
-  font-size: 80px;
+  font-size: 300%;
   text-align: center;
   color: #DCDCDD;
 }
