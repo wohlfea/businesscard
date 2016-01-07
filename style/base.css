@@ -8,6 +8,9 @@ body {
 ul {
   list-style-type: none;
 }
+img {
+  max-width: 100%;
+}
 
 #mainheading {
   background-color: #46494C;
