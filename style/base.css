@@ -32,11 +32,11 @@ nav ul a {
   padding-left: 15px;
   padding-right: 15px;
 }
-nav ul a:hover {
+nav ul li:hover > * {
   text-decoration: none;
   color: #1985A1;
-  padding-left: 15px;
 }
+
 a:visited {
   color: #46494C;
 }
