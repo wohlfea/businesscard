@@ -24,6 +24,7 @@ nav ul i {
   font-size: 150%;
 }
 nav ul li:first-child {
+  position: relative;
   margin-top: 2px;
 }
 nav ul a {
@@ -32,7 +33,7 @@ nav ul a {
   padding-left: 15px;
   padding-right: 15px;
 }
-nav ul li:hover > * {
+nav ul a:hover > * {
   text-decoration: none;
   color: #1985A1;
 }
@@ -44,5 +45,6 @@ img {
   max-width: 100%;
 }
 hr {
-  width: 100;
+  position: absolute;
+  width: 100%;
 }

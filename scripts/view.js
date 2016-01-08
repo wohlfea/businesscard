@@ -3,16 +3,16 @@ var projectView = {};
 projectView.handleTabs = function() {
   $('.maindisp').hide();
   $('#projects').show();
-  $('nav').on('click', function(e){
+  $('#menuItems').on('click', function(e){
     var target = e.target;
-    console.log(target.id);
-    if(target.id == 'navHome'){
+    var targetParent = target.parentNode;
+    var targetGP = targetParent.parentNode;
+    if(target == $('.icon-home')[0] || targetParent.id == 'navHome' || targetGP.id == 'navHome'){
       menuView.close();
       $('.maindisp').hide();
       $('#projects').show();
       projectView.scrollTo('#projects');
-
-    } else if(target.id == 'navAbout'){
+    } else if(target == $('.icon-info')[0] || targetParent.id == 'navAbout' || targetGP.id == 'navAbout'){
       menuView.close();
       $('.maindisp').hide();
       $('#about').show();
@@ -25,6 +25,7 @@ projectView.scrollTo = function(x) {
 };
 
 var menuView = {};
+
 menuView.hamburgerHandler = function () {
   $('.icon-menu').on('click', function(){
     $('nav ul').slideToggle('fast');
@@ -36,5 +37,15 @@ menuView.close = function() {
     $('.icon-menu').trigger('click');
   }
 };
+menuView.resizeListen = function() {
+  $(window).resize(function(){
+    var w = $(window).width();
+    if(w > 640 && $('nav ul').is(':hidden')) {
+      $('nav ul').removeAttr('style');
+    }
+  });
+};
+
 projectView.handleTabs();
 menuView.hamburgerHandler();
+menuView.resizeListen();
