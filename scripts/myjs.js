@@ -10,20 +10,9 @@ function Project(obj) {
 }
 
 Project.prototype.toHTML = function() {
-  var $newProject = $('.template').clone();
-  $newProject.data('title', this.title);
-  $newProject.data('pubdate', this.pubdate);
-  $newProject.data('url', this.url);
-  $newProject.data('imgsrc', this.imgsrc);
-  console.log($newProject.data());
-  $newProject.find('h1').html(this.title);
-  $newProject.find('time').html(this.pubdate);
-  $newProject.find('#desc').html(this.desc);
-  $newProject.find('img').attr('src', this.imgsrc);
-  $newProject.find('#thelink').attr('href', this.url);
-  $newProject.attr('class', '');
-
-  return $newProject;
+  var template = $('#template').html();
+  var handleFunc = Handlebars.compile(template);
+  return (handleFunc(this));
 };
 
 theData.sort(function(a,b) {
