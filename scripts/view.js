@@ -7,12 +7,12 @@ projectView.handleTabs = function() {
     var target = e.target;
     var targetParent = target.parentNode;
     var targetGP = targetParent.parentNode;
-    if(target == $('.icon-home')[0] || targetParent.id == 'nav-home' || targetGP.id == 'nav-home'){
+    if(target === $('.icon-home')[0] || targetParent.id === 'nav-home' || targetGP.id === 'nav-home'){
       menuView.close();
       $('.main-disp').hide();
       $('#projects').show();
       projectView.scrollTo('#projects');
-    } else if(target == $('.icon-info')[0] || targetParent.id == 'nav-about' || targetGP.id == 'nav-about'){
+    } else if(target === $('.icon-info')[0] || targetParent.id === 'nav-about' || targetGP.id === 'nav-about'){
       menuView.close();
       $('.main-disp').hide();
       $('#about').show();
