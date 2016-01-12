@@ -16,4 +16,9 @@
     padding-right: 15px;
     padding-top: 20px;
   }
+  #about p {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

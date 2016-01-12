@@ -20,8 +20,8 @@ projectView.handleTabs = function() {
     };
   });
 };
-projectView.scrollTo = function(x) {
-  $('body, html').animate({ scrollTop: $(x).offset().top - $('.mainnav ul').innerHeight() }, 500);
+projectView.scrollTo = function() {
+  $('body, html').animate({ scrollTop: $('#contentArea').offset().top - $('.mainnav ul').innerHeight() - 15 }, 500);
 };
 
 var menuView = {};

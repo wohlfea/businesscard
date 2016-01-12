@@ -1,3 +1,6 @@
+h1, h2, h3, h4 {
+  font-family: 'Josefin Sans', sans-serif;
+}
 .icon-menu {
   font-size: 200%;
 }
@@ -5,7 +8,6 @@
   padding: 20px 0px 20px 0px;
   text-align: right;
 }
-
 #theMenu {
   padding-bottom: 20px
 }
@@ -13,10 +15,34 @@
   background-color: #46494C;
   margin-top: 0px;
 }
-
 #mainheading h1 {
+  padding: 25px 0px 25px 0px;
   margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 300%;
   text-align: center;
   color: #DCDCDD;
+}
+#projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#projects > * {
+  text-align: center;
+}
+#about h2{
+  margin-top: 50px;
+  text-align: center;
+  justify-content: center;
+}
+#about p {
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.project-img {
+  border: 3px solid #46494C;
+  max-width: 70%;
 }

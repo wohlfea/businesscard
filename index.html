@@ -4,22 +4,23 @@
     <meta charset="utf-8">
     <title>Digital Business Card</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display|Inconsolata' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style/icons.css">
     <link rel="stylesheet" type="text/css" href="style/base.css">
     <link rel="stylesheet" type="text/css" href="style/layout.css">
     <link rel="stylesheet" type="text/css" href="style/modules.css">
     <script id="template" type="text/template">
-      <article>
+      <article class="project">
         <header>
-          <h1>{{title}}</h1>
-          <div class="date">
-            <time>{{pubdate}}</time>
-          </div>
+          <h2>{{title}}</h2>
         </header>
         <section class='articlebody'>
           <a id='thelink' href="{{url}}">
-            <img src="{{imgsrc}}"></img>
+            <img src="{{imgsrc}}" class="project-img"></img>
           </a>
+          <div class="date">
+            <time>{{pubdate}}</time>
+          </div>
           <p id='desc'>{{desc}}</p>
         </section>
       </article>
