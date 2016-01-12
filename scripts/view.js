@@ -1,27 +1,32 @@
 var projectView = {};
 
 projectView.handleTabs = function() {
-  $('.maindisp').hide();
+  $('.main-disp').hide();
   $('#projects').show();
-  $('#menuItems').on('click', function(e){
+  $('#menu-items').on('click', function(e){
     var target = e.target;
     var targetParent = target.parentNode;
     var targetGP = targetParent.parentNode;
-    if(target == $('.icon-home')[0] || targetParent.id == 'navHome' || targetGP.id == 'navHome'){
+    if(target == $('.icon-home')[0] || targetParent.id == 'nav-home' || targetGP.id == 'nav-home'){
       menuView.close();
-      $('.maindisp').hide();
+      $('.main-disp').hide();
       $('#projects').show();
       projectView.scrollTo('#projects');
-    } else if(target == $('.icon-info')[0] || targetParent.id == 'navAbout' || targetGP.id == 'navAbout'){
+    } else if(target == $('.icon-info')[0] || targetParent.id == 'nav-about' || targetGP.id == 'nav-about'){
       menuView.close();
-      $('.maindisp').hide();
+      $('.main-disp').hide();
       $('#about').show();
       projectView.scrollTo('#about');
     };
   });
 };
 projectView.scrollTo = function() {
-  $('body, html').animate({ scrollTop: $('#contentArea').offset().top - $('.mainnav ul').innerHeight() - 15 }, 500);
+  $('body, html').animate({ scrollTop: $('#content-area').offset().top - $('.main-nav ul').innerHeight() - 15 }, 500);
+};
+projectView.show = function() {
+  projectsArray.forEach(function(obj){
+    $('#projects').append(obj.toHTML());
+  });
 };
 
 var menuView = {};
