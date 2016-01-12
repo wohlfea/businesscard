@@ -5,13 +5,13 @@
   nav ul {
     display: block;
   }
-  #menuItems{
+  #menu-items{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
   }
-  #menuItems li {
+  #menu-items li {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 20px;
