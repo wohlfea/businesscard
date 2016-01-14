@@ -1,5 +1,4 @@
 (function(module){
-  var projectsArray = [];
 
   function Project(obj) {
     this.obj = obj;
@@ -35,9 +34,8 @@
     theData.sort(function(a,b) {
       return (new Date(b.pubdate)) - (new Date(a.pubdate));
     });
-
-    theData.forEach(function(obj) {
-      projectsArray.push(new Project(obj));
+    module.projectsArray = theData.map(function(obj) {
+      return new Project(obj);
     });
   };
 
@@ -64,6 +62,5 @@
   };
 
   Project.checkStorage();
-  module.projectsArray = projectsArray;
   module.Project = Project;
 })(window);
