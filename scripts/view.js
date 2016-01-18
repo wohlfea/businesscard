@@ -13,12 +13,10 @@
       if(target === $('.icon-home')[0] || targetParent.id === 'nav-home' || targetGP.id === 'nav-home'){
         menuView.close();
         $('.main-disp').hide();
-        $('.proj-disp').hide();
         $('#projects').show();
         projectView.scrollTo('#projects');
       } else if(target === $('.icon-info')[0] || targetParent.id === 'nav-about' || targetGP.id === 'nav-about'){
         menuView.close();
-        $('.main-disp').hide();
         $('.proj-disp').hide();
         $('#about').show();
         projectView.scrollTo('#about');

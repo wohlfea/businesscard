@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
   color: #DCDCDD;
 }
 #content-area {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 #projects h2{
@@ -34,7 +34,7 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 #about h2{
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   justify-content: center;
 }
