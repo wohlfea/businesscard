@@ -52,10 +52,6 @@
       }
     });
   };
-
-  projectView.handleTabs();
-  menuView.hamburgerHandler();
-  menuView.resizeListen();
   module.projectView = projectView;
   module.menuView = menuView;
 })(window);

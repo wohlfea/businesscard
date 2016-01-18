@@ -60,7 +60,5 @@
       Project.getData();
     }
   };
-
-  Project.checkStorage();
   module.Project = Project;
 })(window);
