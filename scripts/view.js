@@ -32,11 +32,15 @@
     projectsArray.forEach(function(obj){
       $('#projects').append(obj.toHTML());
     });
+    projectView.carousel();
+  };
+  projectView.carousel = function() {
     $('.proj-disp').slick({
-      dots: true
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 2000
     });
   };
-
   var menuView = {};
 
   menuView.hamburgerHandler = function () {
