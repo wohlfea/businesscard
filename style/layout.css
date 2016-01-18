@@ -19,7 +19,7 @@ h1, h2, h3, h4 {
   padding: 25px 0px 25px 0px;
   margin-top: 0px;
   margin-bottom: 0px;
-  font-size: 300%;
+  font-size: 400%;
   text-align: center;
   color: #DCDCDD;
 }
@@ -27,8 +27,8 @@ h1, h2, h3, h4 {
   width: 80%;
   margin: auto;
 }
-#projects {
-
+#projects h2{
+  font-size: 300%;
 }
 #projects > * {
   text-align: center;
@@ -60,5 +60,20 @@ h1, h2, h3, h4 {
 .slick-prev:hover:before,
 .slick-next:hover:before
 {
+    color: #1985A1;
+}
+.slick-dots li button:before {
+  opacity: 1;
+  color: #46494C;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+  color: #1985A1;
+  opacity: 1;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: 1;
     color: #1985A1;
 }
