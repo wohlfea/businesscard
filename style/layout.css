@@ -47,8 +47,22 @@ h1, h2, h3, h4 {
   border: 3px solid #46494C;
   margin-right: auto;
   margin-left: auto;
-  max-width: 70%;
+  max-width: 100%;
 }
 .slick-prev {
+
+}
+.slick-next {
+
+}
+.slick-prev:before, .slick-next:before {
   font-size: 80px;
+  color: #46494C;
+
+}
+.slick-prev:before{
+
+}
+.slick-next:before{
+
 }
