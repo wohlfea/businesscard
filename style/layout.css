@@ -23,11 +23,12 @@ h1, h2, h3, h4 {
   text-align: center;
   color: #DCDCDD;
 }
+#content-area {
+  width: 80%;
+  margin: auto;
+}
 #projects {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
 }
 #projects > * {
   text-align: center;
@@ -44,5 +45,10 @@ h1, h2, h3, h4 {
 }
 .project-img {
   border: 3px solid #46494C;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 70%;
+}
+.slick-prev {
+  font-size: 80px;
 }
