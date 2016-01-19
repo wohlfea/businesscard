@@ -2,35 +2,18 @@
 
   var projectView = {};
 
-  projectView.handleTabs = function() {
-    $('.main-disp').hide();
-    $('.proj-disp').hide();
-    $('#projects').show();
-    $('#menu-items').on('click', function(e){
-      var target = e.target;
-      var targetParent = target.parentNode;
-      var targetGP = targetParent.parentNode;
-      if(target === $('.icon-home')[0] || targetParent.id === 'nav-home' || targetGP.id === 'nav-home'){
-        menuView.close();
-        $('.main-disp').hide();
-        $('#projects').show();
-        projectView.scrollTo('#projects');
-      } else if(target === $('.icon-info')[0] || targetParent.id === 'nav-about' || targetGP.id === 'nav-about'){
-        menuView.close();
-        $('.proj-disp').hide();
-        $('#about').show();
-        projectView.scrollTo('#about');
-      };
-    });
-  };
-  projectView.scrollTo = function() {
-    $('body, html').animate({ scrollTop: $('#content-area').offset().top - $('.main-nav ul').innerHeight() - 15 }, 500);
-  };
   projectView.show = function() {
+    if(!$('#projects')[0]){
+      $('#content-area').prepend('<section id="projects" class="proj-disp"></section>');
+    }
+    $('#projects').hide();
     projectsArray.forEach(function(obj){
       $('#projects').append(obj.toHTML());
     });
     projectView.carousel();
+    console.log('fading in');
+    $('#projects').fadeIn('slow');
+    $('#projects').resize();
   };
   projectView.carousel = function() {
     $('.proj-disp').slick({
