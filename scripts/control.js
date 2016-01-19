@@ -4,30 +4,28 @@
   controller.index = function() {
     console.log('index selected');
     menuView.close();
-    $('.main-disp').fadeOut(function(){
+    $('.main-disp').fadeOut('slow',function(){
       if($('#projects')[0]){
       } else {
         console.log('checking storage');
         Project.checkStorage();
       }
     });
-    projectView.scrollTo('#projects');
   };
   controller.about = function() {
     menuView.close();
     if($('#projects')[0]){
-      $('#projects').fadeOut(function(){
+      $('#projects').fadeOut('slow',function(){
         $('#projects').remove();
         $('#about').css('visibility', 'visible');
         $('#about').hide();
-        $('#about').fadeIn();
+        $('#about').fadeIn('slow');
       });
-    } else {
+    }  else {
       $('#about').css('visibility', 'visible');
-      $('#about').hide();
-      $('#about').fadeIn();
+    //   $('#about').hide();
+    //   $('#about').fadeIn('slow');
     }
-    projectView.scrollTo('#about');
   };
   controller.init = function() {
     menuView.hamburgerHandler();

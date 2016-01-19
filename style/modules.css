@@ -16,6 +16,12 @@
     padding-right: 15px;
     padding-top: 20px;
   }
+  #main-heading h1 {
+    font-size: 400%;
+  }
+  #projects h2{
+    font-size: 250%;
+  }
   #about p {
     max-width: 60%;
     margin-left: auto;

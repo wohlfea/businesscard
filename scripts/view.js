@@ -2,9 +2,6 @@
 
   var projectView = {};
 
-  projectView.scrollTo = function() {
-    $('body, html').animate({ scrollTop: $('#content-area').offset().top - $('.main-nav ul').innerHeight() - 15 }, 500);
-  };
   projectView.show = function() {
     if(!$('#projects')[0]){
       $('#content-area').prepend('<section id="projects" class="proj-disp"></section>');
@@ -15,7 +12,7 @@
     });
     projectView.carousel();
     console.log('fading in');
-    $('#projects').fadeIn();
+    $('#projects').fadeIn('slow');
     $('#projects').resize();
   };
   projectView.carousel = function() {
