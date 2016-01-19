@@ -24,14 +24,18 @@ h1, h2, h3, h4 {
   color: #DCDCDD;
 }
 #content-area {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
+
 #projects h2{
-  font-size: 300%;
+  font-size: 250%;
 }
 #projects > * {
   text-align: center;
+}
+#about {
+  visibility: hidden;
 }
 #about h2{
   margin-top: 40px;
@@ -47,7 +51,7 @@ h1, h2, h3, h4 {
   border: 3px solid #46494C;
   margin-right: auto;
   margin-left: auto;
-  max-width: 70%;
+  max-width: 90%;
 }
 .slick-prev {
   left: -45px;

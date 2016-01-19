@@ -9,10 +9,14 @@
     if(!$('#projects')[0]){
       $('#content-area').prepend('<section id="projects" class="proj-disp"></section>');
     }
+    $('#projects').hide();
     projectsArray.forEach(function(obj){
       $('#projects').append(obj.toHTML());
     });
     projectView.carousel();
+    console.log('fading in');
+    $('#projects').fadeIn();
+    $('#projects').resize();
   };
   projectView.carousel = function() {
     $('.proj-disp').slick({
