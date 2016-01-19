@@ -5,8 +5,6 @@ controller.index = function() {
   menuView.close();
   $('.main-disp').hide();
   if($('#projects')[0]){
-    console.log('projects exists');
-    $('#projects').show();
   } else {
     console.log('checking storage');
     Project.checkStorage();
@@ -16,7 +14,8 @@ controller.index = function() {
 controller.about = function() {
   menuView.close();
   $('#projects').remove();
-  $('#about').show();
+  $('#about').hide();
+  $('#about').fadeIn();
   projectView.scrollTo('#about');
 };
 
