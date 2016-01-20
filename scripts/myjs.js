@@ -1,5 +1,4 @@
 (function(module){
-
   function Project(obj) {
     this.obj = obj;
     this.title = obj.title;
@@ -13,6 +12,21 @@
     var template = $('#template').html();
     var handleFunc = Handlebars.compile(template);
     return (handleFunc(this));
+  };
+  Project.gitList = [];
+  Project.getGit = function(cb){
+    console.log('making ajax call');
+    var qs = '?per_page=50&sort=updated';
+    $.ajax({
+      type: 'GET',
+      url: 'https://api.github.com/users/wohlfea/repos' + qs,
+      headers: {'Authorization': 'token ' + githubToken},
+      success: function(data, message, xhr) {
+        console.log(data);
+        Project.gitList = data;
+      }
+    })
+    .done(cb);
   };
   Project.getData = function() {
     $.ajax({

@@ -4,8 +4,13 @@
   controller.index = function() {
     console.log('index selected');
     menuView.close();
-    $('.main-disp').fadeOut('slow',function(){
+    $('#about').fadeOut('slow',function(){
       if($('#projects')[0]){
+      } else if($('#repoList')[0]) {
+        $('#repoList').fadeOut('slow',function(){
+          $('#repoList').remove();
+          Project.checkStorage();
+        });
       } else {
         console.log('checking storage');
         Project.checkStorage();
@@ -21,17 +26,31 @@
         $('#about').hide();
         $('#about').fadeIn('slow');
       });
-    }  else {
+    }  else if($('#repoList')[0]){
+      $('#repoList').fadeOut('slow',function(){
+        $('#repoList').remove();
+        $('#about').css('visibility', 'visible');
+        $('#about').fadeIn('slow');
+      });
+    } else {
       $('#about').css('visibility', 'visible');
-    //   $('#about').hide();
-    //   $('#about').fadeIn('slow');
+    }
+  };
+  controller.projects = function() {
+    $('#about').hide();
+    if($('#projects')[0]){
+      $('#projects').fadeOut('slow',function(){
+        $('#projects').remove();
+        Project.getGit(projectView.showGit);
+      });
+    } else {
+      Project.getGit(projectView.showGit);
     }
   };
   controller.init = function() {
     menuView.hamburgerHandler();
     menuView.resizeListen();
   };
-
-  controller.init();
   module.controller = controller;
+  controller.init();
 })(window);
