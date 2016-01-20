@@ -22,6 +22,15 @@
       autoplaySpeed: 3000
     });
   };
+  projectView.showGit = function() {
+    console.log('hit showgit func');
+    $('#content-area').append('<ul id="repoList"></ul>');
+    $('#repoList').hide();
+    $.each(Project.gitList, function(i){
+      $('#repoList').append('<li>' + Project.gitList[i].name + '</li>');
+    });
+    $('#repoList').fadeIn('slow');
+  };
   var menuView = {};
 
   menuView.hamburgerHandler = function () {

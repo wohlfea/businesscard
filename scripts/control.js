@@ -23,15 +23,18 @@
       });
     }  else {
       $('#about').css('visibility', 'visible');
-    //   $('#about').hide();
-    //   $('#about').fadeIn('slow');
     }
+  };
+  controller.projects = function() {
+    $('#projects').fadeOut('slow',function(){
+      $('#projects').remove();
+      Project.getGit(projectView.showGit);
+    });
   };
   controller.init = function() {
     menuView.hamburgerHandler();
     menuView.resizeListen();
   };
-
-  controller.init();
   module.controller = controller;
+  controller.init();
 })(window);

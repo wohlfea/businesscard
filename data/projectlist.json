@@ -26,5 +26,12 @@
     "url": "http://wohlfea.github.io/cookie-stand/index.html",
     "imgsrc": "images/pat.png",
     "desc": "Mock up of a customer facing website for a cookie company."
+  },
+  {
+    "title": "Other Projects",
+    "pubdate": "2015-10-29",
+    "url": "/projects",
+    "imgsrc": "images/other2.png",
+    "desc": "A list of other github projects!"
   }
 ]
