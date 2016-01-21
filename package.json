@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "AJ Wohlfert's Portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wohlfea/businesscard.git"
+  },
+  "author": "AJ Wohlfert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wohlfea/businesscard/issues"
+  },
+  "homepage": "https://github.com/wohlfea/businesscard#readme"
+}
