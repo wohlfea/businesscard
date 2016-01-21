@@ -24,7 +24,7 @@ h1, h2, h3, h4 {
   color: #DCDCDD;
 }
 #content-area {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -54,7 +54,14 @@ h1, h2, h3, h4 {
   max-width: 90%;
 }
 .slick-prev {
-  left: -45px;
+  height: 40px;
+  width: 40px;
+  left: -50px;
+}
+.slick-next {
+  height: 40px;
+  width: 40px;
+  right: -50px;
 }
 .slick-prev:before, .slick-next:before {
   opacity: 1;
