@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/wohlfea/businesscard/issues"
   },
-  "homepage": "https://github.com/wohlfea/businesscard#readme"
+  "homepage": "https://github.com/wohlfea/businesscard#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-request-proxy": "^1.0.11"
+  }
 }
