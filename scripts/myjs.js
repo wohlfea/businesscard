@@ -1,4 +1,5 @@
 (function(module){
+
   function Project(obj) {
     this.obj = obj;
     this.title = obj.title;
@@ -14,6 +15,7 @@
     return (handleFunc(this));
   };
   Project.gitList = [];
+
   Project.getGit = function(cb){
     console.log('making ajax call');
     var qs = '?per_page=50&sort=updated';
@@ -56,11 +58,11 @@
         url: 'data/projectlist.json',
         complete: function(response){
           if (localStorage.eTag === response.getResponseHeader('ETag')){
-            console.log('ETag match detected... Populating from local storage');
+            console.log('Etag match detected... Populating from local storage data');
             Project.loadAll(JSON.parse(localStorage.theData));
             projectView.show();
           } else{
-            console.log('ETags did not match... Downloading data');
+            console.log('Etags did not match... Downloading new data');
             Project.getData();
           }
         }

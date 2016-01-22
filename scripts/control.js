@@ -2,50 +2,16 @@
   var controller = {};
 
   controller.index = function() {
-    console.log('index selected');
     menuView.close();
-    $('#about').fadeOut('slow',function(){
-      if($('#projects')[0]){
-      } else if($('#repoList')[0]) {
-        $('#repoList').fadeOut('slow',function(){
-          $('#repoList').remove();
-          Project.checkStorage();
-        });
-      } else {
-        console.log('checking storage');
-        Project.checkStorage();
-      }
-    });
+    projectView.showHome();
   };
   controller.about = function() {
     menuView.close();
-    if($('#projects')[0]){
-      $('#projects').fadeOut('slow',function(){
-        $('#projects').remove();
-        $('#about').css('visibility', 'visible');
-        $('#about').hide();
-        $('#about').fadeIn('slow');
-      });
-    }  else if($('#repoList')[0]){
-      $('#repoList').fadeOut('slow',function(){
-        $('#repoList').remove();
-        $('#about').css('visibility', 'visible');
-        $('#about').fadeIn('slow');
-      });
-    } else {
-      $('#about').css('visibility', 'visible');
-    }
+    projectView.showAbout();
   };
   controller.projects = function() {
     $('#about').hide();
-    if($('#projects')[0]){
-      $('#projects').fadeOut('slow',function(){
-        $('#projects').remove();
-        Project.getGit(projectView.showGit);
-      });
-    } else {
-      Project.getGit(projectView.showGit);
-    }
+    projectView.showProjects();
   };
   controller.init = function() {
     menuView.hamburgerHandler();

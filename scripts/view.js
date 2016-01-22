@@ -23,7 +23,6 @@
     });
   };
   projectView.showGit = function() {
-    console.log('hit showgit func');
     $('#content-area').append('<ul id="repoList"></ul>');
     $('#repoList').hide();
     $.each(Project.gitList, function(i){
@@ -31,6 +30,45 @@
     });
     $('#repoList').fadeIn('slow');
   };
+  projectView.showHome = function() {
+    $('#about').fadeOut('slow',function(){
+      if($('#projects')[0]){
+      } else if($('#repoList')[0]) {
+        $('#repoList').fadeOut('slow',function(){
+          $('#repoList').remove();
+          Project.checkStorage();
+        });
+      } else {
+        Project.checkStorage();
+      }
+    });
+  };
+  projectView.showAbout = function() {
+    if($('#projects')[0]){
+      $('#projects').fadeOut('slow',function(){
+        $('#projects').remove();
+        $('#about').css('visibility', 'visible').hide().fadeIn('slow');
+      });
+    }  else if($('#repoList')[0]){
+      $('#repoList').fadeOut('slow',function(){
+        $('#repoList').remove();
+        $('#about').css('visibility', 'visible').fadeIn('slow');
+      });
+    } else {
+      $('#about').css('visibility', 'visible');
+    }
+  };
+  projectView.showProjects = function() {
+    if($('#projects')[0]){
+      $('#projects').fadeOut('slow',function(){
+        $('#projects').remove();
+        Project.getGit(projectView.showGit);
+      });
+    } else {
+      Project.getGit(projectView.showGit);
+    }
+  };
+
   var menuView = {};
 
   menuView.hamburgerHandler = function () {
