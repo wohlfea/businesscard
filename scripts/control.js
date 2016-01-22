@@ -22,15 +22,12 @@
     if($('#projects')[0]){
       $('#projects').fadeOut('slow',function(){
         $('#projects').remove();
-        $('#about').css('visibility', 'visible');
-        $('#about').hide();
-        $('#about').fadeIn('slow');
+        $('#about').css('visibility', 'visible').hide().fadeIn('slow');
       });
     }  else if($('#repoList')[0]){
       $('#repoList').fadeOut('slow',function(){
         $('#repoList').remove();
-        $('#about').css('visibility', 'visible');
-        $('#about').fadeIn('slow');
+        $('#about').css('visibility', 'visible').fadeIn('slow');
       });
     } else {
       $('#about').css('visibility', 'visible');
